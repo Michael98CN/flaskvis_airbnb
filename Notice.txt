@@ -18,3 +18,7 @@ pip install flask
 
 5).在虚拟环境下输入python可以启动python解释器
 
+
+
+注意：更新项目时，应该先git pull 一下，再 git push
+
