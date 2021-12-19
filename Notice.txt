@@ -1,1 +1,20 @@
 flask项目运行需要一个虚拟环境，所以需要自己创建一个，然后导入相应的requirements.txt文件
+
+参考步骤：
+1).首先需要安装虚拟环境        
+pip install virtualenv        
+virtualenv --version // 查看版本,测试是否安装成功
+
+2).在存放虚拟环境的目录里面创建一个虚拟环境        
+1>cd 进入到存放虚拟环境的文件夹        
+2>virtualenv venv  -->创建了一个名为venv的虚拟环境
+
+3).在虚拟环境下开启虚拟环境        
+进入虚拟环境下: scripts\activate -->开启当前的虚拟环境       
+                deactivate -->退出当前虚拟环境
+4).开启成功之后在虚拟环境中安装相应的工具包.
+安装flask       
+pip install flask
+
+5).在虚拟环境下输入python可以启动python解释器
+
