@@ -43,6 +43,56 @@ class Neighborhood(db.Model):
         self.neighbourhood_id = neighbourhood_id
         self.neighbourhood = neighbourhood
 
+class Listing(db.Model):
+    __tablename__ = 'listing_details'  # 表名
+    id = db.Column(db.Integer,primary_key=True )
+    name = db.Column(db.String(255))
+    description = db.Column(db.Text)
+    neighborhood_overview = db.Column(db.Text)
+    host_name = db.Column(db.String(255))
+    host_since = db.Column(db.String(255))
+    host_about = db.Column(db.Text)
+    host_is_superhost = db.Column(db.String(255))
+    host_identity_verified = db.Column(db.String(255))
+    neighbourhood_cleansed = db.Column(db.String(255))
+    latitude = db.Column(db.Float)
+    longitude = db.Column(db.Float)
+    property_type = db.Column(db.String(255))
+    room_type = db.Column(db.String(255))
+    accommodates = db.Column(db.Integer)
+    bathrooms_text = db.Column(db.String(255))
+    bedrooms = db.Column(db.Integer)
+    beds = db.Column(db.String(255))
+    amenities = db.Column(db.Text)
+    price = db.Column(db.Float)
+    has_availability = db.Column(db.String(255))
+    availability_30 = db.Column(db.Integer)
+    availability_60 = db.Column(db.Integer)
+    availability_90 = db.Column(db.Integer)
+    availability_365 = db.Column(db.Integer)
+    number_of_reviews = db.Column(db.Integer)
+    number_of_reviews_ltm = db.Column(db.Integer)
+    number_of_reviews_l30d = db.Column(db.Integer)
+    review_scores_rating = db.Column(db.Float)
+    review_scores_accuracy = db.Column(db.Float)
+    review_scores_cleanliness = db.Column(db.Float)
+    review_scores_checkin = db.Column(db.Float)
+    review_scores_communication = db.Column(db.Float)
+    review_scores_location = db.Column(db.Float)
+    review_scores_value = db.Column(db.Float)
+    instant_bookable = db.Column(db.String(255))
+    reviews_per_month = db.Column(db.Float)
+
+class Calendar(db.Model):
+    __tablename__ = 'calendar'  # 表名
+    id = db.Column(db.Integer,primary_key=True )
+    listing_id = db.Column(db.Integer)
+    date = db.Column(db.Float)
+    available = db.Column(db.Float)
+    price = db.Column(db.Float)
+    adjusted_price = db.Column(db.Float)
+    minimum_nights = db.Column(db.Integer)
+    maximum_nights = db.Column(db.Integer)
 
 db.create_all()
 
